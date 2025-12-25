@@ -25,16 +25,15 @@ const socialLinks: SocialLink[] = [
 
 export default function Sidebar() {
   return (
-    <aside className="w-[320px] p-6 border-r border-slate-800 bg-dark">
-      <div className="text-center mb-8">
+    <aside className="w-full md:w-[320px] p-6 border-r border-slate-800 bg-dark light:bg-white">
+      <div className="text-center md:text-left mb-8">
         <img
           src="/profile.jpg"
           alt="Profile"
-          className="w-32 h-32 mx-auto rounded-full
-          border-4 border-primary object-cover"
+          className="w-32 h-32 mx-auto md:mx-0 rounded-full border-4 border-primary object-cover"
         />
-        <h1 className="mt-4 text-xl font-semibold">Amir Khorramdel Avval</h1>
-        <p className="text-primary text-sm">Frontend Developer</p>
+        <h1 className="mt-4 text-lg md:text-xl font-semibold">Your Name</h1>
+        <p className="text-primary text-sm md:text-base">Frontend Developer</p>
       </div>
 
       <Section title="Contact">
@@ -50,7 +49,7 @@ export default function Sidebar() {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-sm text-primary hover:underline">
+            className="block text-sm md:text-base text-primary hover:underline">
             {link.label}
           </a>
         ))}
@@ -68,8 +67,7 @@ export default function Sidebar() {
           ].map((skill) => (
             <span
               key={skill}
-              className="border border-primary
-              px-2 py-1 text-sm rounded-md">
+              className="border border-primary px-2 py-1 text-xs md:text-sm rounded-md">
               {skill}
             </span>
           ))}
@@ -83,7 +81,7 @@ function Section({ title, children }: SectionProps) {
   return (
     <div className="mb-6">
       <h2 className="text-primary font-semibold mb-2">{title}</h2>
-      <div className="text-sm space-y-1">{children}</div>
+      <div className="text-sm md:text-base space-y-1">{children}</div>
     </div>
   );
 }
