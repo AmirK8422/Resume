@@ -32,7 +32,9 @@ export default function Sidebar() {
           alt="Profile"
           className="w-32 h-32 mx-auto md:mx-0 rounded-full border-4 border-primary object-cover"
         />
-        <h1 className="mt-4 text-lg md:text-xl font-semibold">Your Name</h1>
+        <h1 className="mt-4 text-lg md:text-xl font-semibold">
+          Amir Khorramdel Avval
+        </h1>
         <p className="text-primary text-sm md:text-base">Frontend Developer</p>
       </div>
 
