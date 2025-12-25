@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #38bdf8;
+  --color-dark: #020617;
+  --color-darkSoft: #0f172a;
+  --color-light: #f8fafc;
+}
+
+@layer base {
+  body {
+    @apply bg-darkSoft text-gray-200;
+  }
+
+  .light body {
+    @apply bg-light text-slate-900;
+  }
+}
+
+/* PDF / Print Mode */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
